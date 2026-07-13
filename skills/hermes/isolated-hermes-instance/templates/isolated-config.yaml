@@ -1,0 +1,199 @@
+# ~/.hermes-private/config.yaml — Isolated Hermes Instance Template
+# Copy to ~/.hermes-private/config.yaml and customize
+
+# MODEL — Via router (recommended for most testing)
+model:
+  provider: custom
+  base_url: http://host.docker.internal:8319/v1
+  api_key: sk-router-1
+  default: any
+  context_length: 256000
+
+# MODEL — Direct HF Inference (for arbitrary model IDs)
+# model:
+#   provider: hf-inference
+#   base_url: https://router.huggingface.co/v1
+#   api_key: ${HF_TOKEN}
+#   default: meta-llama/Meta-Llama-3.1-8B-Instruct
+#   context_length: 256000
+
+providers:
+  hf-inference:
+    base_url: https://router.huggingface.co/v1
+
+fallback_providers:
+  - provider: nous
+    base_url: https://inference-api.nousresearch.com/v1
+    model: deepseek/deepseek-v4-flash
+    default: deepseek/deepseek-v4-flash
+
+toolsets:
+  - hermes-cli
+
+max_live_sessions: 8
+
+agent:
+  max_turns: 60
+  gateway_timeout: 1800
+  restart_drain_timeout: 180
+  api_max_retries: 3
+  service_tier: normal
+  tool_use_enforcement: auto
+  task_completion_guidance: false
+  parallel_tool_call_guidance: true
+  environment_probe: true
+  coding_context: auto
+  verify_on_stop: true
+  gateway_timeout_warning: 900
+  clarify_timeout: 600
+  gateway_notify_interval: 180
+  gateway_auto_continue_freshness: 3600
+  image_input_mode: text
+  reasoning_effort: high
+
+# DOCKER BACKEND — Key isolation feature
+terminal:
+  backend: docker
+  modal_mode: auto
+  cwd: /workspace
+  timeout: 300
+  daemon_term_grace_seconds: 2.0
+  env_passthrough: []
+  home_mode: auto
+  shell_init_files: []
+  auto_source_bashrc: true
+  docker_image: nikolaik/python-nodejs:python3.11-nodejs20
+  docker_forward_env: []
+  container_cpu: 2
+  container_memory: 8192
+  container_disk: 51200
+  container_persistent: true
+  docker_volumes: []
+  docker_mount_cwd_to_workspace: true
+  docker_extra_args: []
+  docker_run_as_host_user: false
+  persistent_shell: true
+
+web:
+  backend: firecrawl
+  search_backend: ""
+  extract_backend: ""
+  use_gateway: true
+
+browser:
+  inactivity_timeout: 120
+  command_timeout: 30
+  record_sessions: false
+  allow_private_urls: false
+  engine: auto
+  auto_local_for_private_urls: true
+  cdp_url: ""
+  dialog_policy: must_respond
+  dialog_timeout_s: 300
+  cloud_provider: browser-use
+  use_gateway: true
+
+checkpoints:
+  enabled: false
+  max_snapshots: 10
+  max_total_size_mb: 200
+  max_file_size_mb: 5
+  auto_prune: true
+  retention_days: 3
+  delete_orphans: true
+  min_interval_hours: 24
+
+file_read_max_chars: 100000
+mcp_discovery_timeout: 1.5
+
+tool_output:
+  max_bytes: 20000
+  max_lines: 500
+  max_line_length: 2000
+
+compression:
+  enabled: true
+  threshold: 0.55
+  target_ratio: 0.08
+  protect_last_n: 8
+  hygiene_hard_message_limit: 40
+  protect_first_n: 3
+  abort_on_summary_failure: false
+  in_place: true
+
+display:
+  compact: true
+  personality: Iris
+  resume_display: full
+  resume_exchanges: 5
+  resume_max_user_chars: 200
+  resume_max_assistant_chars: 150
+  resume_max_assistant_lines: 2
+  resume_skip_tool_only: true
+  busy_input_mode: interrupt
+  interface: cli
+  tui_auto_resume_recent: false
+  tui_agents_nudge: true
+  bell_on_complete: false
+  show_reasoning: true
+  reasoning_full: false
+  memory_notifications: "on"
+  streaming: true
+  timestamps: false
+  final_response_markdown: render
+  persistent_output: true
+  persistent_output_max_lines: 100
+  persist_prompts: true
+  inline_diffs: true
+  file_mutation_verifier: true
+  credits_notices: false
+  turn_completion_explainer: true
+  show_cost: true
+  skin: iris
+  language: en
+  tui_status_indicator: kaomoji
+  cli_refresh_interval: 1.0
+  user_message_preview:
+    first_lines: 2
+    last_lines: 2
+  interim_assistant_messages: true
+  tool_progress_command: false
+  tool_preview_length: 80
+  tool_progress_grouping: accumulate
+  reasoning_style: code
+
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  write_approval: false
+  memory_char_limit: 500
+  user_char_limit: 300
+
+delegation:
+  model: nvidia/nemotron-3-ultra:free
+  provider: nous
+  max_concurrent_children: 1
+  max_async_children: 2
+  max_spawn_depth: 1
+  orchestrator_enabled: true
+  subagent_auto_approve: false
+
+skills:
+  external_dirs: []
+  template_vars: true
+  inline_shell: false
+  inline_shell_timeout: 10
+  guard_agent_created: false
+  write_approval: false
+  disabled: []
+
+curator:
+  enabled: true
+  interval_hours: 168
+  min_idle_hours: 2
+  stale_after_days: 30
+  archive_after_days: 90
+  consolidate: false
+  prune_builtins: true
+
+timezone: ""

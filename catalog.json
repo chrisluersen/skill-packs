@@ -1,0 +1,927 @@
+{
+  "specVersion": "1.0",
+  "generatedAt": "2026-07-13T17:21:48.472947",
+  "source": "github.com/chrisluersen/skill-packs",
+  "skills": [
+    {
+      "name": "claude-code",
+      "category": "autonomous-ai-agents",
+      "version": "2.2.0",
+      "description": "Delegate coding to Claude Code CLI (features, PRs).",
+      "path": "skills/autonomous-ai-agents/claude-code",
+      "installUrl": "skills/autonomous-ai-agents/claude-code/SKILL.md"
+    },
+    {
+      "name": "codex",
+      "category": "autonomous-ai-agents",
+      "version": "1.0.0",
+      "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+      "path": "skills/autonomous-ai-agents/codex",
+      "installUrl": "skills/autonomous-ai-agents/codex/SKILL.md"
+    },
+    {
+      "name": "delegation-boundaries",
+      "category": "autonomous-ai-agents",
+      "version": "0.0.0",
+      "description": "Judgment framework for deciding when to delegate work to subagents (delegate_task, background subagents) versus executing directly. Covers the cost model, the failure modes, and the recovery patterns.",
+      "path": "skills/autonomous-ai-agents/delegation-boundaries",
+      "installUrl": "skills/autonomous-ai-agents/delegation-boundaries/SKILL.md"
+    },
+    {
+      "name": "hermes-agent",
+      "category": "autonomous-ai-agents",
+      "version": "2.1.0",
+      "description": "Configure, extend, or contribute to Hermes Agent.",
+      "path": "skills/autonomous-ai-agents/hermes-agent",
+      "installUrl": "skills/autonomous-ai-agents/hermes-agent/SKILL.md"
+    },
+    {
+      "name": "hermes-browser-interfaces",
+      "category": "autonomous-ai-agents",
+      "version": "1.1.0",
+      "description": "Set up and use browser-based UIs for Hermes Agent \u2014 the built-in dashboard and third-party web UIs \u2014 especially on Windows.",
+      "path": "skills/autonomous-ai-agents/hermes-browser-interfaces",
+      "installUrl": "skills/autonomous-ai-agents/hermes-browser-interfaces/SKILL.md"
+    },
+    {
+      "name": "hermes-remote-access",
+      "category": "autonomous-ai-agents",
+      "version": "1.0.0",
+      "description": "Configure remote and mobile access to Hermes Agent via Gateway API Server, Tailscale, SSH, and messaging platforms.",
+      "path": "skills/autonomous-ai-agents/hermes-remote-access",
+      "installUrl": "skills/autonomous-ai-agents/hermes-remote-access/SKILL.md"
+    },
+    {
+      "name": "hermes-runtime-comparison",
+      "category": "autonomous-ai-agents",
+      "version": "2.0.0",
+      "description": "Compare Hermes Agent runtime modes (CLI/TUI, Gateway, Dashboard, Desktop App, WebUI, ACP, MCP) and select the right interface for a given use case.",
+      "path": "skills/autonomous-ai-agents/hermes-runtime-comparison",
+      "installUrl": "skills/autonomous-ai-agents/hermes-runtime-comparison/SKILL.md"
+    },
+    {
+      "name": "hermes-tool-diagnostics",
+      "category": "autonomous-ai-agents",
+      "version": "1.3.0",
+      "description": "Troubleshoot Hermes tool availability \u2014 resolve 'system dependency not met', 'missing X', and platform-limitation blockers that prevent toolsets from loading.",
+      "path": "skills/autonomous-ai-agents/hermes-tool-diagnostics",
+      "installUrl": "skills/autonomous-ai-agents/hermes-tool-diagnostics/SKILL.md"
+    },
+    {
+      "name": "opencode",
+      "category": "autonomous-ai-agents",
+      "version": "1.2.0",
+      "description": "Delegate coding to OpenCode CLI (features, PR review).",
+      "path": "skills/autonomous-ai-agents/opencode",
+      "installUrl": "skills/autonomous-ai-agents/opencode/SKILL.md"
+    },
+    {
+      "name": "architecture-diagram",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+      "path": "skills/creative/architecture-diagram",
+      "installUrl": "skills/creative/architecture-diagram/SKILL.md"
+    },
+    {
+      "name": "ascii-art",
+      "category": "creative",
+      "version": "4.0.0",
+      "description": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.",
+      "path": "skills/creative/ascii-art",
+      "installUrl": "skills/creative/ascii-art/SKILL.md"
+    },
+    {
+      "name": "ascii-video",
+      "category": "creative",
+      "version": "0.0.0",
+      "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+      "path": "skills/creative/ascii-video",
+      "installUrl": "skills/creative/ascii-video/SKILL.md"
+    },
+    {
+      "name": "baoyu-infographic",
+      "category": "creative",
+      "version": "1.56.1",
+      "description": "Infographics: 21 layouts x 21 styles (\u4fe1\u606f\u56fe, \u53ef\u89c6\u5316).",
+      "path": "skills/creative/baoyu-infographic",
+      "installUrl": "skills/creative/baoyu-infographic/SKILL.md"
+    },
+    {
+      "name": "claude-design",
+      "category": "creative",
+      "version": "1.1.0",
+      "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+      "path": "skills/creative/claude-design",
+      "installUrl": "skills/creative/claude-design/SKILL.md"
+    },
+    {
+      "name": "comfyui",
+      "category": "creative",
+      "version": "5.1.0",
+      "description": "Generate images, video, and audio with ComfyUI \u2014 install, launch, manage nodes/models, run workflows with parameter injection. Uses the official comfy-cli for lifecycle and direct REST/WebSocket API for execution.",
+      "path": "skills/creative/comfyui",
+      "installUrl": "skills/creative/comfyui/SKILL.md"
+    },
+    {
+      "name": "design-md",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Author/validate/export Google's DESIGN.md token spec files.",
+      "path": "skills/creative/design-md",
+      "installUrl": "skills/creative/design-md/SKILL.md"
+    },
+    {
+      "name": "eikon",
+      "category": "creative",
+      "version": "0.0.0",
+      "description": "Guide the user through making or editing a herm sidebar avatar (eikon) using herm's built-in Eikon Studio tab. The agent's role is advisory (what makes a good source, which knob to reach for); source generation is /eikon-create and all rasterize/bake happens in-app.",
+      "path": "skills/creative/eikon",
+      "installUrl": "skills/creative/eikon/SKILL.md"
+    },
+    {
+      "name": "eikon-create",
+      "category": "creative",
+      "version": "0.0.0",
+      "description": "Interactively generate source images (and optionally short videos) for a herm eikon avatar, iterate on them with the user, and land them under ~/.hermes/eikons/<name>/source/ so the Eikon Studio tab can tune and bake them. This is the agent-driven counterpart to Studio's one-shot Generate dialog.",
+      "path": "skills/creative/eikon-create",
+      "installUrl": "skills/creative/eikon-create/SKILL.md"
+    },
+    {
+      "name": "excalidraw",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).",
+      "path": "skills/creative/excalidraw",
+      "installUrl": "skills/creative/excalidraw/SKILL.md"
+    },
+    {
+      "name": "html-doc-ux",
+      "category": "creative",
+      "version": "0.0.0",
+      "description": "Surgically add UX enhancements to existing static HTML reference documents \u2014 back-to-top, scroll indicators, clipboard fallback, mobile touch targets, stagger animations, theme toggle, reading progress. Not building from scratch (that's html-application-building), not merging content (that's knowledge-consolidation), not auditing claims (that's document-verification-update).",
+      "path": "skills/creative/html-doc-ux",
+      "installUrl": "skills/creative/html-doc-ux/SKILL.md"
+    },
+    {
+      "name": "humanizer",
+      "category": "creative",
+      "version": "2.5.1",
+      "description": "Humanize text: strip AI-isms and add real voice.",
+      "path": "skills/creative/humanizer",
+      "installUrl": "skills/creative/humanizer/SKILL.md"
+    },
+    {
+      "name": "manim-video",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
+      "path": "skills/creative/manim-video",
+      "installUrl": "skills/creative/manim-video/SKILL.md"
+    },
+    {
+      "name": "p5js",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "p5.js sketches: gen art, shaders, interactive, 3D.",
+      "path": "skills/creative/p5js",
+      "installUrl": "skills/creative/p5js/SKILL.md"
+    },
+    {
+      "name": "popular-web-designs",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+      "path": "skills/creative/popular-web-designs",
+      "installUrl": "skills/creative/popular-web-designs/SKILL.md"
+    },
+    {
+      "name": "pretext",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Use when building creative browser demos with @chenglou/pretext \u2014 DOM-free text layout for ASCII art, typographic flow around obstacles, text-as-geometry games, kinetic typography, and text-powered generative art. Produces single-file HTML demos by default.",
+      "path": "skills/creative/pretext",
+      "installUrl": "skills/creative/pretext/SKILL.md"
+    },
+    {
+      "name": "sketch",
+      "category": "creative",
+      "version": "1.0.0",
+      "description": "Throwaway HTML mockups: 2-3 design variants to compare.",
+      "path": "skills/creative/sketch",
+      "installUrl": "skills/creative/sketch/SKILL.md"
+    },
+    {
+      "name": "songwriting-and-ai-music",
+      "category": "creative",
+      "version": "0.0.0",
+      "description": "Songwriting craft and Suno AI music prompts.",
+      "path": "skills/creative/songwriting-and-ai-music",
+      "installUrl": "skills/creative/songwriting-and-ai-music/SKILL.md"
+    },
+    {
+      "name": "touchdesigner-mcp",
+      "category": "creative",
+      "version": "1.1.0",
+      "description": "Control a running TouchDesigner instance via twozero MCP \u2014 create operators, set parameters, wire connections, execute Python, build real-time visuals. 36 native tools.",
+      "path": "skills/creative/touchdesigner-mcp",
+      "installUrl": "skills/creative/touchdesigner-mcp/SKILL.md"
+    },
+    {
+      "name": "jupyter-live-kernel",
+      "category": "data-science",
+      "version": "1.0.0",
+      "description": "Iterative Python via live Jupyter kernel (hamelnb).",
+      "path": "skills/data-science/jupyter-live-kernel",
+      "installUrl": "skills/data-science/jupyter-live-kernel/SKILL.md"
+    },
+    {
+      "name": "fleet-health-watchdog",
+      "category": "devops",
+      "version": "1.2.0",
+      "description": "Fleet health watchdog cron job \u2014 silent when healthy, alerts on circuit breaker trips, quarantines, or maintenance mode. Companion cron: fleet-regression-detector (nightly smoke test suite). Uses no_agent=True pattern for zero-token operation.",
+      "path": "skills/devops/fleet-health-watchdog",
+      "installUrl": "skills/devops/fleet-health-watchdog/SKILL.md"
+    },
+    {
+      "name": "npm-workspace-maintenance",
+      "category": "devops",
+      "version": "1.0.0",
+      "description": "Fix npm vulnerabilities, broken lockfiles, and dependency issues in workspace monorepos. Covers the audit-fix crash workaround, override-based pinning, workspace-scoped dependency bumps, and clean-reinstall recovery \u2014 for any npm workspaces monorepo.",
+      "path": "skills/devops/npm-workspace-maintenance",
+      "installUrl": "skills/devops/npm-workspace-maintenance/SKILL.md"
+    },
+    {
+      "name": "himalaya",
+      "category": "email",
+      "version": "1.1.0",
+      "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+      "path": "skills/email/himalaya",
+      "installUrl": "skills/email/himalaya/SKILL.md"
+    },
+    {
+      "name": "codebase-inspection",
+      "category": "github",
+      "version": "1.0.0",
+      "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+      "path": "skills/github/codebase-inspection",
+      "installUrl": "skills/github/codebase-inspection/SKILL.md"
+    },
+    {
+      "name": "fork-detach",
+      "category": "github",
+      "version": "0.0.0",
+      "description": "Detach a forked repository from its origin \u2014 scrub all identity traces, rewrite metadata, and make it stand alone",
+      "path": "skills/github/fork-detach",
+      "installUrl": "skills/github/fork-detach/SKILL.md"
+    },
+    {
+      "name": "git-history-rewrite",
+      "category": "github",
+      "version": "0.0.0",
+      "description": "Rewrite git repository history using git-filter-repo \u2014 rename authors, scrub legacy references, rebrand projects, and force-push cleaned history. Covers inline callbacks, replace-message files, Windows pitfalls, and the complete scrub \u2192 verify \u2192 push workflow.",
+      "path": "skills/github/git-history-rewrite",
+      "installUrl": "skills/github/git-history-rewrite/SKILL.md"
+    },
+    {
+      "name": "github-auth",
+      "category": "github",
+      "version": "1.1.0",
+      "description": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.",
+      "path": "skills/github/github-auth",
+      "installUrl": "skills/github/github-auth/SKILL.md"
+    },
+    {
+      "name": "github-code-review",
+      "category": "github",
+      "version": "1.1.0",
+      "description": "Review PRs: diffs, inline comments via gh or REST.",
+      "path": "skills/github/github-code-review",
+      "installUrl": "skills/github/github-code-review/SKILL.md"
+    },
+    {
+      "name": "github-fork-workflow",
+      "category": "github",
+      "version": "0.0.0",
+      "description": "Standard workflow for forking a GitHub repository and setting up local development",
+      "path": "skills/github/github-fork-workflow",
+      "installUrl": "skills/github/github-fork-workflow/SKILL.md"
+    },
+    {
+      "name": "github-issues",
+      "category": "github",
+      "version": "1.1.0",
+      "description": "Create, triage, label, assign GitHub issues via gh or REST.",
+      "path": "skills/github/github-issues",
+      "installUrl": "skills/github/github-issues/SKILL.md"
+    },
+    {
+      "name": "github-pr-workflow",
+      "category": "github",
+      "version": "1.1.0",
+      "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
+      "path": "skills/github/github-pr-workflow",
+      "installUrl": "skills/github/github-pr-workflow/SKILL.md"
+    },
+    {
+      "name": "github-repo-management",
+      "category": "github",
+      "version": "1.1.0",
+      "description": "Clone/create/fork repos; manage remotes, releases.",
+      "path": "skills/github/github-repo-management",
+      "installUrl": "skills/github/github-repo-management/SKILL.md"
+    },
+    {
+      "name": "github-windows-operations",
+      "category": "github",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/github/github-windows-operations",
+      "installUrl": "skills/github/github-windows-operations/SKILL.md"
+    },
+    {
+      "name": "agent-persona-authoring",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": "Author and iteratively refine an agent's personality/identity document (SOUL.md) \u2014 extract traits from curated visual inspiration, separate personality from operational protocols, codify voice rules, and handle refinement cycles without drifting.",
+      "path": "skills/hermes/agent-persona-authoring",
+      "installUrl": "skills/hermes/agent-persona-authoring/SKILL.md"
+    },
+    {
+      "name": "cascade",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/hermes/cascade",
+      "installUrl": "skills/hermes/cascade/SKILL.md"
+    },
+    {
+      "name": "cost-performance-tuning",
+      "category": "hermes",
+      "version": "1.6.0",
+      "description": "Tune Hermes Agent model, compression, streaming, delegation, and auxiliary settings for optimal cost-to-performance ratio. Documents every relevant config key with its canonical default so you can make informed trade-offs and roll back cleanly.",
+      "path": "skills/hermes/cost-performance-tuning",
+      "installUrl": "skills/hermes/cost-performance-tuning/SKILL.md"
+    },
+    {
+      "name": "hermes-cron-operations",
+      "category": "hermes",
+      "version": "1.5.0",
+      "description": "Operate, troubleshoot, and understand the Hermes Agent cron scheduler \u2014 architecture, gateway dependency, execution patterns, failure pattern checklist, and failure recovery.",
+      "path": "skills/hermes/hermes-cron-operations",
+      "installUrl": "skills/hermes/hermes-cron-operations/SKILL.md"
+    },
+    {
+      "name": "hermes-fleet-profiles",
+      "category": "hermes",
+      "version": "1.11.0",
+      "description": "Deploy multi-agent fleet profiles from a wiki manifest \u2014 clone Hermes profiles from default, inject SOUL.md persona, configure per-profile model and tools, and create CLI wrappers for each fleet agent.",
+      "path": "skills/hermes/hermes-fleet-profiles",
+      "installUrl": "skills/hermes/hermes-fleet-profiles/SKILL.md"
+    },
+    {
+      "name": "hermes-gateway-setup",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": "Configure, operate, and troubleshoot the Hermes messaging gateway \u2014 set up Telegram, Discord, and other platforms. Covers config vars, gateway lifecycle, and the interactive wizard's PTY limitations.",
+      "path": "skills/hermes/hermes-gateway-setup",
+      "installUrl": "skills/hermes/hermes-gateway-setup/SKILL.md"
+    },
+    {
+      "name": "hermes-mcp-debugging",
+      "category": "hermes",
+      "version": "1.11.0",
+      "description": "Debug MCP servers in Hermes \u2014 lifecycle, diagnostics, common failures, Windows fixes. Companion to native-mcp.",
+      "path": "skills/hermes/hermes-mcp-debugging",
+      "installUrl": "skills/hermes/hermes-mcp-debugging/SKILL.md"
+    },
+    {
+      "name": "hermes-output-visibility",
+      "category": "hermes",
+      "version": "1.1.0",
+      "description": "Configure Hermes Agent for maximum output visibility \u2014 control what you see, how you see it, and why responses get truncated. Covers CLI, TUI, and gateway platforms.",
+      "path": "skills/hermes/hermes-output-visibility",
+      "installUrl": "skills/hermes/hermes-output-visibility/SKILL.md"
+    },
+    {
+      "name": "hermes-provider-setup",
+      "category": "hermes",
+      "version": "1.3.0",
+      "description": "Configure LLM providers in Hermes Agent \u2014 add API keys, set base URLs, pick models, and handle provider-specific quirks. Covers the z.ai/GLM, OpenRouter, Hugging Face, custom endpoints, and general provider workflow.",
+      "path": "skills/hermes/hermes-provider-setup",
+      "installUrl": "skills/hermes/hermes-provider-setup/SKILL.md"
+    },
+    {
+      "name": "hermes-role-profile-builder",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": "Create purpose-built Hermes profiles for specialized workflows \u2014 clone from lightweight, configure toolsets, curate skills, set memories, and create aliases.",
+      "path": "skills/hermes/hermes-role-profile-builder",
+      "installUrl": "skills/hermes/hermes-role-profile-builder/SKILL.md"
+    },
+    {
+      "name": "hermes-session-continuity",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": "Recover context across compacted, queued, or cross-platform Hermes sessions (CLI \u2194 Discord \u2194 TUI)",
+      "path": "skills/hermes/hermes-session-continuity",
+      "installUrl": "skills/hermes/hermes-session-continuity/SKILL.md"
+    },
+    {
+      "name": "isolated-hermes-instance",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/hermes/isolated-hermes-instance",
+      "installUrl": "skills/hermes/isolated-hermes-instance/SKILL.md"
+    },
+    {
+      "name": "multi-agent-orchestration-design",
+      "category": "hermes",
+      "version": "2.8.1",
+      "description": "Design optimal multi-agent fleet architectures \u2014 agent topology, orchestration layers, distributed systems patterns (circuit breakers, bulkheads, task contracts), and research-backed evaluation methodology. Ships with 64-test E2E test suite + silent health watchdog cron.",
+      "path": "skills/hermes/multi-agent-orchestration-design",
+      "installUrl": "skills/hermes/multi-agent-orchestration-design/SKILL.md"
+    },
+    {
+      "name": "self-evolution",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": "Run the Hermes Agent Self-Evolution pipeline \u2014 evolve skills using DSPy optimization through the local router",
+      "path": "skills/hermes/self-evolution",
+      "installUrl": "skills/hermes/self-evolution/SKILL.md"
+    },
+    {
+      "name": "session-wiki-pipeline",
+      "category": "hermes",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/hermes/session-wiki-pipeline",
+      "installUrl": "skills/hermes/session-wiki-pipeline/SKILL.md"
+    },
+    {
+      "name": "skill-maintenance",
+      "category": "hermes",
+      "version": "2.0.0",
+      "description": "Keep Hermes skills lean and correct over time \u2014 bloat audits, consolidation workflow, version management, archive/merge decisions.",
+      "path": "skills/hermes/skill-maintenance",
+      "installUrl": "skills/hermes/skill-maintenance/SKILL.md"
+    },
+    {
+      "name": "ai-platform-data-extraction",
+      "category": "knowledge-base-organization",
+      "version": "1.2.0",
+      "description": "Extract structured knowledge from external AI platform exports (Claude.ai, ChatGPT, Gemini, Pi, etc.) \u2014 read JSON exports, classify conversations, extract concepts/preferences/decisions, and stage for wiki ingestion. The structured-data counterpart to wiki-content-migration (which handles file-based migration).",
+      "path": "skills/knowledge-base-organization/ai-platform-data-extraction",
+      "installUrl": "skills/knowledge-base-organization/ai-platform-data-extraction/SKILL.md"
+    },
+    {
+      "name": "wiki-content-migration",
+      "category": "knowledge-base-organization",
+      "version": "1.0.0",
+      "description": "Audit user workspace locations \u2014 .hermes/plans/, home directory, Hermes_Artifacts, Documents \u2014 and migrate wiki-worthy files into the LLM wiki with proper frontmatter. Covers the full pipeline: survey, classify, frontmatter, copy, update references, clean up originals.",
+      "path": "skills/knowledge-base-organization/wiki-content-migration",
+      "installUrl": "skills/knowledge-base-organization/wiki-content-migration/SKILL.md"
+    },
+    {
+      "name": "wishlist-entity-creation",
+      "category": "knowledge-base-organization",
+      "version": "0.0.0",
+      "description": "Create standardized entity pages for wishlist/to-buy items with provenance tracking",
+      "path": "skills/knowledge-base-organization/wishlist-entity-creation",
+      "installUrl": "skills/knowledge-base-organization/wishlist-entity-creation/SKILL.md"
+    },
+    {
+      "name": "native-mcp",
+      "category": "mcp",
+      "version": "1.3.0",
+      "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+      "path": "skills/mcp/native-mcp",
+      "installUrl": "skills/mcp/native-mcp/SKILL.md"
+    },
+    {
+      "name": "heartmula",
+      "category": "media",
+      "version": "1.0.0",
+      "description": "HeartMuLa: Suno-like song generation from lyrics + tags.",
+      "path": "skills/media/heartmula",
+      "installUrl": "skills/media/heartmula/SKILL.md"
+    },
+    {
+      "name": "songsee",
+      "category": "media",
+      "version": "1.0.0",
+      "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+      "path": "skills/media/songsee",
+      "installUrl": "skills/media/songsee/SKILL.md"
+    },
+    {
+      "name": "youtube-content",
+      "category": "media",
+      "version": "0.0.0",
+      "description": "YouTube transcripts to summaries, threads, blogs.",
+      "path": "skills/media/youtube-content",
+      "installUrl": "skills/media/youtube-content/SKILL.md"
+    },
+    {
+      "name": "signal-cli",
+      "category": "messaging",
+      "version": "1.0.0",
+      "description": "Install, configure, and register Signal CLI on Windows for local Signal messaging access.",
+      "path": "skills/messaging/signal-cli",
+      "installUrl": "skills/messaging/signal-cli/SKILL.md"
+    },
+    {
+      "name": "huggingface-hub",
+      "category": "mlops",
+      "version": "1.0.0",
+      "description": "HuggingFace hf CLI: search/download/upload models, datasets.",
+      "path": "skills/mlops/huggingface-hub",
+      "installUrl": "skills/mlops/huggingface-hub/SKILL.md"
+    },
+    {
+      "name": "brave-bookmarks-to-wiki",
+      "category": "note-taking",
+      "version": "2.2.0",
+      "description": "Parse Brave bookmarks (HTML export or native JSON) into wiki pages \u2014 phased approach: catalog first, selectively deep-process high-value folders.",
+      "path": "skills/note-taking/brave-bookmarks-to-wiki",
+      "installUrl": "skills/note-taking/brave-bookmarks-to-wiki/SKILL.md"
+    },
+    {
+      "name": "obsidian",
+      "category": "note-taking",
+      "version": "0.0.0",
+      "description": "Read, search, create, and edit notes in the Obsidian vault.",
+      "path": "skills/note-taking/obsidian",
+      "installUrl": "skills/note-taking/obsidian/SKILL.md"
+    },
+    {
+      "name": "airtable",
+      "category": "productivity",
+      "version": "1.1.0",
+      "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+      "path": "skills/productivity/airtable",
+      "installUrl": "skills/productivity/airtable/SKILL.md"
+    },
+    {
+      "name": "brain-dump",
+      "category": "productivity",
+      "version": "9",
+      "description": "ADHD-friendly brain dump: zero-friction capture of whatever's racing through your head. Auto-categorizes into tasks, ideas, worries, reminders, and random \u2014 saves to the wiki as searchable, datestamped pages, and promotes action items to tracking.",
+      "path": "skills/productivity/brain-dump",
+      "installUrl": "skills/productivity/brain-dump/SKILL.md"
+    },
+    {
+      "name": "document-verification-update",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "'Audit reference documents for factual accuracy or completeness. Three modes: (1) verify claims against live system state, (2) verify claims against source code implementation, (3) check coverage against external authoritative reference lists. Apply targeted patches to fix stale or missing content. For READMEs, setup guides, architecture docs, stack reports any document that describes current reality.'",
+      "path": "skills/productivity/document-verification-update",
+      "installUrl": "skills/productivity/document-verification-update/SKILL.md"
+    },
+    {
+      "name": "google-workspace",
+      "category": "productivity",
+      "version": "1.1.0",
+      "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+      "path": "skills/productivity/google-workspace",
+      "installUrl": "skills/productivity/google-workspace/SKILL.md"
+    },
+    {
+      "name": "knowledge-base-organization",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/productivity/knowledge-base-organization",
+      "installUrl": "skills/productivity/knowledge-base-organization/SKILL.md"
+    },
+    {
+      "name": "knowledge-consolidation",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "Merge multiple fragmented knowledge files (markdown, HTML, text) into one comprehensive, self-contained document. Plan-first, execute-second methodology for vault/folder decluttering.",
+      "path": "skills/productivity/knowledge-consolidation",
+      "installUrl": "skills/productivity/knowledge-consolidation/SKILL.md"
+    },
+    {
+      "name": "maps",
+      "category": "productivity",
+      "version": "1.2.0",
+      "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
+      "path": "skills/productivity/maps",
+      "installUrl": "skills/productivity/maps/SKILL.md"
+    },
+    {
+      "name": "nano-pdf",
+      "category": "productivity",
+      "version": "1.0.0",
+      "description": "Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).",
+      "path": "skills/productivity/nano-pdf",
+      "installUrl": "skills/productivity/nano-pdf/SKILL.md"
+    },
+    {
+      "name": "notion",
+      "category": "productivity",
+      "version": "2.0.0",
+      "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
+      "path": "skills/productivity/notion",
+      "installUrl": "skills/productivity/notion/SKILL.md"
+    },
+    {
+      "name": "ocr-and-documents",
+      "category": "productivity",
+      "version": "2.3.0",
+      "description": "Extract text from PDFs/scans (pymupdf, marker-pdf).",
+      "path": "skills/productivity/ocr-and-documents",
+      "installUrl": "skills/productivity/ocr-and-documents/SKILL.md"
+    },
+    {
+      "name": "petdex",
+      "category": "productivity",
+      "version": "1.0.0",
+      "description": "Install and select animated petdex mascots for Hermes.",
+      "path": "skills/productivity/petdex",
+      "installUrl": "skills/productivity/petdex/SKILL.md"
+    },
+    {
+      "name": "powerpoint",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "Create, read, edit .pptx decks, slides, notes, templates.",
+      "path": "skills/productivity/powerpoint",
+      "installUrl": "skills/productivity/powerpoint/SKILL.md"
+    },
+    {
+      "name": "quick-win",
+      "category": "productivity",
+      "version": "3",
+      "description": "ADHD dopamine hack. When nothing feels doable, find a single task that takes \u22645 minutes, produces visible output, and has an obvious 'done' state. One completion breaks the stall and builds momentum.",
+      "path": "skills/productivity/quick-win",
+      "installUrl": "skills/productivity/quick-win/SKILL.md"
+    },
+    {
+      "name": "recipe-card-generation",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "Generate formatted recipe cards as PDFs for coffee/tea brewing, cooking, or any procedural recipe. Handles specs boxes, step tables, quick-look summaries, dial-in guides, and checklists. Outputs print-ready PDF via fpdf2.",
+      "path": "skills/productivity/recipe-card-generation",
+      "installUrl": "skills/productivity/recipe-card-generation/SKILL.md"
+    },
+    {
+      "name": "redirect",
+      "category": "productivity",
+      "version": "3",
+      "description": "ADHD recovery skill. When a distraction steals your train of thought, minimize the re-entry tax. No long recaps. No 'where were we?' Three-second anchor back to exactly what you were doing, then the single next step.",
+      "path": "skills/productivity/redirect",
+      "installUrl": "skills/productivity/redirect/SKILL.md"
+    },
+    {
+      "name": "reference-document-layout",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "Design scannable, well-tiered markdown reference documents that present structured information \u2014 filesystem layouts, config maps, priority-ordered lists, system anatomies.",
+      "path": "skills/productivity/reference-document-layout",
+      "installUrl": "skills/productivity/reference-document-layout/SKILL.md"
+    },
+    {
+      "name": "task-management-workflow",
+      "category": "productivity",
+      "version": "0.0.0",
+      "description": "Full-stack task management \u2014 create, track, update, and complete tasks via CLI with auto-generated dashboards",
+      "path": "skills/productivity/task-management-workflow",
+      "installUrl": "skills/productivity/task-management-workflow/SKILL.md"
+    },
+    {
+      "name": "teams-meeting-pipeline",
+      "category": "productivity",
+      "version": "1.1.0",
+      "description": "Operate the Teams meeting summary pipeline via Hermes CLI \u2014 summarize meetings, inspect pipeline status, replay jobs, manage Microsoft Graph subscriptions.",
+      "path": "skills/productivity/teams-meeting-pipeline",
+      "installUrl": "skills/productivity/teams-meeting-pipeline/SKILL.md"
+    },
+    {
+      "name": "godmode",
+      "category": "red-teaming",
+      "version": "1.0.0",
+      "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
+      "path": "skills/red-teaming/godmode",
+      "installUrl": "skills/red-teaming/godmode/SKILL.md"
+    },
+    {
+      "name": "arxiv",
+      "category": "research",
+      "version": "1.0.0",
+      "description": "Search arXiv papers by keyword, author, category, or ID.",
+      "path": "skills/research/arxiv",
+      "installUrl": "skills/research/arxiv/SKILL.md"
+    },
+    {
+      "name": "blogwatcher",
+      "category": "research",
+      "version": "2.0.0",
+      "description": "Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.",
+      "path": "skills/research/blogwatcher",
+      "installUrl": "skills/research/blogwatcher/SKILL.md"
+    },
+    {
+      "name": "community-discourse-mining",
+      "category": "research",
+      "version": "0.0.0",
+      "description": "Systematically extract, filter, and integrate valuable insights from community discussions on reference documents \u2014 gist comments, GitHub issues, forum threads, blog discussions.",
+      "path": "skills/research/community-discourse-mining",
+      "installUrl": "skills/research/community-discourse-mining/SKILL.md"
+    },
+    {
+      "name": "ecosystem-reconnaissance",
+      "category": "research",
+      "version": "1.1.0",
+      "description": ">-",
+      "path": "skills/research/ecosystem-reconnaissance",
+      "installUrl": "skills/research/ecosystem-reconnaissance/SKILL.md"
+    },
+    {
+      "name": "polymarket",
+      "category": "research",
+      "version": "1.0.0",
+      "description": "Query Polymarket: markets, prices, orderbooks, history.",
+      "path": "skills/research/polymarket",
+      "installUrl": "skills/research/polymarket/SKILL.md"
+    },
+    {
+      "name": "research-paper-writing",
+      "category": "research",
+      "version": "1.1.0",
+      "description": "Write ML papers for NeurIPS/ICML/ICLR: design\u2192submit.",
+      "path": "skills/research/research-paper-writing",
+      "installUrl": "skills/research/research-paper-writing/SKILL.md"
+    },
+    {
+      "name": "tech-stack-research",
+      "category": "research",
+      "version": "1.0.0",
+      "description": "Investigate what tools, software, and workflows people and organizations use by examining public signals (social media, GitHub, docs) with proper source verification and inline citation.",
+      "path": "skills/research/tech-stack-research",
+      "installUrl": "skills/research/tech-stack-research/SKILL.md"
+    },
+    {
+      "name": "web-research-synthesis",
+      "category": "research",
+      "version": "1.3.0",
+      "description": "Research an open-ended user question via web search, handle blocked/failed sources gracefully, extract signal from search snippets, and deliver a structured answer with verdict.",
+      "path": "skills/research/web-research-synthesis",
+      "installUrl": "skills/research/web-research-synthesis/SKILL.md"
+    },
+    {
+      "name": "openhue",
+      "category": "smart-home",
+      "version": "1.0.0",
+      "description": "Control Philips Hue lights, scenes, rooms via OpenHue CLI.",
+      "path": "skills/smart-home/openhue",
+      "installUrl": "skills/smart-home/openhue/SKILL.md"
+    },
+    {
+      "name": "xurl",
+      "category": "social-media",
+      "version": "1.1.1",
+      "description": "X/Twitter via xurl CLI: post, search, DM, media, v2 API.",
+      "path": "skills/social-media/xurl",
+      "installUrl": "skills/social-media/xurl/SKILL.md"
+    },
+    {
+      "name": "ai-terminal-stack",
+      "category": "software-development",
+      "version": "0.0.0",
+      "description": "Plan, configure, and maintain a high-performance AI-oriented terminal stack: zellij (multiplexer) + Neovim (editor) + herm (Hermes dashboard) + supporting CLIs.",
+      "path": "skills/software-development/ai-terminal-stack",
+      "installUrl": "skills/software-development/ai-terminal-stack/SKILL.md"
+    },
+    {
+      "name": "hermes-agent-skill-authoring",
+      "category": "software-development",
+      "version": "2.0.0",
+      "description": "Author SKILL.md: frontmatter, structure, and conventions for both user-local and in-repo Hermes skills.",
+      "path": "skills/software-development/hermes-agent-skill-authoring",
+      "installUrl": "skills/software-development/hermes-agent-skill-authoring/SKILL.md"
+    },
+    {
+      "name": "html-application-building",
+      "category": "software-development",
+      "version": "0.0.0",
+      "description": "Build polished, self-contained HTML single-page applications from research, data, or documentation. Uses a 4-pass iterative refinement model (content \u2192 interactivity \u2192 polish \u2192 quality) to produce production-quality single-file web apps.",
+      "path": "skills/software-development/html-application-building",
+      "installUrl": "skills/software-development/html-application-building/SKILL.md"
+    },
+    {
+      "name": "local-llm-setup",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Set up local LLM inference on Windows with Ollama, llama.cpp, or vLLM. Covers model selection by VRAM tier, Ollama Hermes integration, context length tuning, and hardware-constrained deployment for 4GB-24GB GPUs.",
+      "path": "skills/software-development/local-llm-setup",
+      "installUrl": "skills/software-development/local-llm-setup/SKILL.md"
+    },
+    {
+      "name": "node-inspect-debugger",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+      "path": "skills/software-development/node-inspect-debugger",
+      "installUrl": "skills/software-development/node-inspect-debugger/SKILL.md"
+    },
+    {
+      "name": "post-phase-review",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Post-execution retrospective cycle: audit what was done vs reality, update the plan with real lessons learned, backfill gaps in already-completed phases (the highest-ROI step), redesign remaining phases, generate new skills from your methodology, commit.",
+      "path": "skills/software-development/post-phase-review",
+      "installUrl": "skills/software-development/post-phase-review/SKILL.md"
+    },
+    {
+      "name": "professional-ai-stack",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Assess a user's hardware and OS, then build a verified professional AI engineering tool stack recommendation with honest cross-platform compatibility and honest tradeoffs.",
+      "path": "skills/software-development/professional-ai-stack",
+      "installUrl": "skills/software-development/professional-ai-stack/SKILL.md"
+    },
+    {
+      "name": "python-debugpy",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+      "path": "skills/software-development/python-debugpy",
+      "installUrl": "skills/software-development/python-debugpy/SKILL.md"
+    },
+    {
+      "name": "requesting-code-review",
+      "category": "software-development",
+      "version": "2.0.0",
+      "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "path": "skills/software-development/requesting-code-review",
+      "installUrl": "skills/software-development/requesting-code-review/SKILL.md"
+    },
+    {
+      "name": "safe-large-file-editing",
+      "category": "software-development",
+      "version": "0.0.0",
+      "description": "Prevent file corruption and verify mutations for all file types. Root causes, safe workflows, post-mutation verification protocol, and recovery from failed patch/large-file corruption.",
+      "path": "skills/software-development/safe-large-file-editing",
+      "installUrl": "skills/software-development/safe-large-file-editing/SKILL.md"
+    },
+    {
+      "name": "simplify-code",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Parallel 3-agent cleanup of recent code changes.",
+      "path": "skills/software-development/simplify-code",
+      "installUrl": "skills/software-development/simplify-code/SKILL.md"
+    },
+    {
+      "name": "spike",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Throwaway experiments to validate an idea before build.",
+      "path": "skills/software-development/spike",
+      "installUrl": "skills/software-development/spike/SKILL.md"
+    },
+    {
+      "name": "systematic-debugging",
+      "category": "software-development",
+      "version": "1.1.0",
+      "description": "4-phase root cause debugging: understand bugs before fixing.",
+      "path": "skills/software-development/systematic-debugging",
+      "installUrl": "skills/software-development/systematic-debugging/SKILL.md"
+    },
+    {
+      "name": "systematic-method-refactoring",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Extract large methods into focused helpers using AST-guided analysis, phased extraction, and compile verification. Reduces cognitive load without changing behavior.",
+      "path": "skills/software-development/systematic-method-refactoring",
+      "installUrl": "skills/software-development/systematic-method-refactoring/SKILL.md"
+    },
+    {
+      "name": "test-driven-development",
+      "category": "software-development",
+      "version": "1.1.0",
+      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+      "path": "skills/software-development/test-driven-development",
+      "installUrl": "skills/software-development/test-driven-development/SKILL.md"
+    },
+    {
+      "name": "web-page-extraction",
+      "category": "software-development",
+      "version": "0.0.0",
+      "description": ">-",
+      "path": "skills/software-development/web-page-extraction",
+      "installUrl": "skills/software-development/web-page-extraction/SKILL.md"
+    },
+    {
+      "name": "windows-cleanup-optimization",
+      "category": "software-development",
+      "version": "1.0.0",
+      "description": "Windows cleanup & optimization \u2014 caches, startup, services, telemetry, disk health, and performance tuning for desktop PCs.",
+      "path": "skills/software-development/windows-cleanup-optimization",
+      "installUrl": "skills/software-development/windows-cleanup-optimization/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+# Zellij Starter Configuration
+
+Save as `~/.config/zellij/config.kdl`
+
+## Core Settings
+```kdl
+pane_frames true
+simplified_ui false
+theme "catppuccin"  // or "tokyonight"
+scrollback_lines 10000
+mouse_mode true
+auto_layout true
+```
+
+## Keybindings (Prefix: Ctrl+p)
+```kdl
+keybinds {
+    shared_except "locked" {
+        bind "Ctrl p" { SwitchToMode "normal"; }
+    }
+    normal {
+        bind "n" { SwitchTabNext; }
+        bind "p" { SwitchTabPrev; }
+        bind "h" { MoveFocusLeft; }
+        bind "j" { MoveFocusDown; }
+        bind "k" { MoveFocusUp; }
+        bind "l" { MoveFocusRight; }
+        bind "H" { ResizeLeft; }
+        bind "J" { ResizeDown; }
+        bind "K" { ResizeUp; }
+        bind "L" { ResizeRight; }
+        bind "d" { NewPaneDown; }
+        bind "r" { NewPaneRight; }
+        bind "t" { NewTab; }
+        bind "x" { ClosePane; }
+        bind "s" { SwitchToMode "session"; }
+        bind "Enter" { TogglePaneFullscreen; }
+        bind "w" { SwitchToMode "search"; }
+        bind "?" { SwitchToMode "help"; }
+    }
+    session {
+        bind "n" { SwitchSessionNext; }
+        bind "p" { SwitchSessionPrev; }
+        bind "Enter" { SwitchSession; }
+        bind "Escape" { SwitchToMode "normal"; }
+    }
+    search {
+        bind "Escape" { SwitchToMode "normal"; }
+        bind "Enter" { Search; }
+    }
+    locked {
+        bind "Ctrl p" { SwitchToMode "normal"; }
+    }
+}
+```
+
+## Default Layout (editor 70% / shell 30% / herm tab)
+```kdl
+layout {
+    default {
+        pane split_direction="vertical" {
+            pane size="70%" name="editor" command="nvim"
+            pane size="30%" name="shell" command="zsh"
+        }
+        pane name="herm" command="herm" focus=false
+    }
+}
+```
+
+## Project Layouts (save as separate .kdl files in ~/.config/zellij/layouts/)
+
+### Web Development Layout
+```kdl
+// ~/.config/zellij/layouts/web-dev.kdl
+layout {
+    web-dev {
+        pane split_direction="vertical" {
+            pane size="60%" name="editor" command="nvim"
+            pane size="40%" split_direction="horizontal" {
+                pane name="server" command="npm run dev"
+                pane name="shell" command="zsh"
+            }
+        }
+        pane name="git" command="lazygit" focus=false
+        pane name="herm" command="herm" focus=false
+    }
+}
+```
+
+### Data Science Layout
+```kdl
+// ~/.config/zellij/layouts/data-science.kdl
+layout {
+    data-science {
+        pane split_direction="vertical" {
+            pane size="70%" name="notebook" command="jupyter lab --no-browser --port=8888"
+            pane size="30%" name="shell" command="zsh"
+        }
+        pane name="editor" command="nvim" focus=false
+        pane name="herm" command="herm" focus=false
+    }
+}
+```
+
+## Web Client Configuration (for Tailscale remote access)
+```kdl
+web_server true
+web_server_ip "0.0.0.0"
+web_server_port 8082
+web_server_cert "/path/to/cert.pem"
+web_server_key "/path/to/key.pem"
+enforce_https_on_localhost true
+
+web_client {
+    base_url "/zellij"
+    font "Iosevka Term"
+    cursor_blink true
+    cursor_style "block"
+    theme {
+        background "28 28 28"
+        foreground "235 219 178"
+        black "28 28 28"
+        red "251 73 52"
+        green "184 187 38"
+        yellow "250 189 47"
+        blue "131 165 152"
+        magenta "174 129 232"
+        cyan "106 153 176"
+        white "235 219 178"
+    }
+}
+```
+
+## Plugin Configuration
+```kdl
+plugins {
+    # Session manager (save/restore layouts)
+    session-manager {
+        location "https://github.com/zellij-org/zellij/releases/download/v0.43.0/zellij-session-manager.wasm"
+    }
+    # Tab bar with session info
+    compact-bar {
+        location "https://github.com/zellij-org/zellij/releases/download/v0.43.0/zellij-compact-bar.wasm"
+    }
+    # Status bar with battery, time, etc.
+    status-bar {
+        location "https://github.com/zellij-org/zellij/releases/download/v0.43.0/zellij-status-bar.wasm"
+    }
+}
+```
+
+## Session Resurrection
+```kdl
+session_resurrection true
+resurrection_timeout 10000
+```
+
+## Mouse Configuration
+```kdl
+mouse_mode true
+scrollback_editor "nvim"
+```
+
+## Clipboard (WSL)
+```kdl
+clipboard "external"
+copy_command "win32yank.exe -i"
+copy_on_select false
+```
+
+## Usage
+```bash
+# Start with default layout
+zellij --layout default
+
+# Start with project layout
+zellij --layout web-dev
+
+# Attach to existing session
+zellij attach
+
+# List sessions
+zellij list-sessions
+
+# Create login token for web client
+zellij web --create-token
+
+# Start web server manually
+zellij web
+```
+
+## SSL Certificates (for web client on 0.0.0.0)
+```bash
+# Using mkcert (recommended)
+mkcert -install
+mkcert localhost 127.0.0.1 ::1 <your-machine-name>
+
+# Or generate self-signed
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes -subj "/CN=localhost"
+```
