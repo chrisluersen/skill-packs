@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="skill-packs-cover.png">
+  <img alt="Hermes Skill Packs — trading card collection of 115 reusable AI skills" src="skill-packs-cover.png" width="100%">
+</picture>
+
 # Hermes Skill Packs
 
 **115 reusable skills** for [Hermes Agent](https://hermes-agent.nousresearch.com) — AI agent workflows, code, research, creative tools, productivity, devops, and more. Installed in one command via `hermes skills tap`.
@@ -6,6 +11,8 @@
 [![Categories](https://img.shields.io/badge/categories-19-green)](https://github.com/chrisluersen/skill-packs)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 [![Generated](https://img.shields.io/badge/generated-2026--07--13-lightgrey)](catalog.json)
+
+Every skill is a structured `SKILL.md` — instructions, examples, pitfalls, and code — loaded into your agent's context on command. Collect them, install them, use them across any agent session.
 
 ---
 
