@@ -1,22 +1,25 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="skill-packs-cover.png">
-  <img alt="Hermes Skill Packs — trading card collection of 115 reusable AI skills" src="skill-packs-cover.png" width="100%">
+  <img alt="Skill Packs — trading card collection of 115 reusable agent skills" src="skill-packs-cover.png" width="100%">
 </picture>
 
-# Hermes Skill Packs
+# Skill Packs
 
-**115 reusable skills** for [Hermes Agent](https://hermes-agent.nousresearch.com) — AI agent workflows, code, research, creative tools, productivity, devops, and more. Installed in one command via `hermes skills tap`.
+**115 reusable skills** for AI agents — code, research, creative tools, productivity, devops, and more. Drop them into any agent that supports SKILL.md-formatted procedures.
 
 [![Skills](https://img.shields.io/badge/skills-115-blue)](https://github.com/chrisluersen/skill-packs)
 [![Categories](https://img.shields.io/badge/categories-19-green)](https://github.com/chrisluersen/skill-packs)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 [![Generated](https://img.shields.io/badge/generated-2026--07--13-lightgrey)](catalog.json)
 
-Every skill is a structured `SKILL.md` — instructions, examples, pitfalls, and code — loaded into your agent's context on command. Collect them, install them, use them across any agent session.
+Every skill is a structured `SKILL.md` — instructions, examples, pitfalls, and code — loaded into your agent's context on command. Collect them, install them, use them across any compatible agent session.
 
 ---
 
 ## Quickstart
+
+<details>
+<summary><b>Hermes Agent</b> (click to expand)</summary>
 
 ```bash
 # Add this repository as a skill source
@@ -31,7 +34,36 @@ hermes skills install chrisluersen/skill-packs/<skill-name>
 
 **Example:** `hermes skills install chrisluersen/skill-packs/web-research-synthesis`
 
-> **New to skills?** A skill is a SKILL.md file with structured instructions, examples, and pitfalls — loaded into your agent's context on command. See the [Hermes skills docs](https://hermes-agent.nousresearch.com/docs).
+```bash
+# List installed skills
+hermes skills list
+
+# View a skill's content
+hermes skills view <skill-name>
+
+# Remove a skill
+hermes skills remove <skill-name>
+
+# Update all skills from registered taps
+hermes skills update
+```
+
+→ [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs)
+</details>
+
+<details>
+<summary><b>Other agents</b> (OpenCode, Claude Code, Codex, etc.)</summary>
+
+Skills are plain `SKILL.md` markdown files. Any agent that supports structured skill loading can consume them:
+
+1. Clone or download this repo
+2. Point your agent's skill loader at the `skills/` directory
+3. The `SKILL.md` files contain full instructions, steps, examples, and pitfalls — no Hermes dependency in the skill content itself
+
+Check your agent's documentation for skill loading specifics.
+</details>
+
+> **New to skills?** A skill is a SKILL.md file with structured instructions, examples, and pitfalls — loaded into your agent's context on command. No platform dependency in the skill format itself.
 
 ---
 
@@ -53,18 +85,18 @@ hermes skills install chrisluersen/skill-packs/<skill-name>
 ## Skills by Category
 
 ### autonomous-ai-agents *(9 skills)*
-Coding agent delegation — Claude Code, Codex, OpenCode. Hermes setup, remote access, runtime comparison, tool diagnostics, and delegation boundaries.
+Coding agent delegation — Claude Code, Codex, OpenCode. Agent setup, remote access, runtime comparison, tool diagnostics, and delegation boundaries.
 
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`claude-code`](skills/autonomous-ai-agents/claude-code/SKILL.md) | 2.2.0 | Delegate coding to Claude Code CLI (features, PRs). |
 | [`codex`](skills/autonomous-ai-agents/codex/SKILL.md) | 1.0.0 | Delegate coding to OpenAI Codex CLI. |
 | [`delegation-boundaries`](skills/autonomous-ai-agents/delegation-boundaries/SKILL.md) | 0.0.0 | Judgment framework for delegating to subagents — cost model, failure modes, recovery. |
-| [`hermes-agent`](skills/autonomous-ai-agents/hermes-agent/SKILL.md) | 2.1.0 | Configure, extend, or contribute to Hermes Agent. |
-| [`hermes-browser-interfaces`](skills/autonomous-ai-agents/hermes-browser-interfaces/SKILL.md) | 1.1.0 | Set up browser UIs for Hermes — dashboard, web interface. |
+| [`hermes-agent`](skills/autonomous-ai-agents/hermes-agent/SKILL.md) | 2.1.0 | Configure, extend, or contribute to an agent platform. |
+| [`hermes-browser-interfaces`](skills/autonomous-ai-agents/hermes-browser-interfaces/SKILL.md) | 1.1.0 | Set up browser UIs for your agent — dashboard, web interface. |
 | [`hermes-remote-access`](skills/autonomous-ai-agents/hermes-remote-access/SKILL.md) | 1.0.0 | Remote and mobile access via Gateway API Server, Tailscale. |
 | [`hermes-runtime-comparison`](skills/autonomous-ai-agents/hermes-runtime-comparison/SKILL.md) | 2.0.0 | Compare CLI/TUI, Gateway, Dashboard, Desktop, Web runtimes. |
-| [`hermes-tool-diagnostics`](skills/autonomous-ai-agents/hermes-tool-diagnostics/SKILL.md) | 1.3.0 | Troubleshoot tool availability — missing dependencies, ACP recovery. |
+| [`hermes-tool-diagnostics`](skills/autonomous-ai-agents/hermes-tool-diagnostics/SKILL.md) | 1.3.0 | Troubleshoot tool availability — missing dependencies, recovery. |
 | [`opencode`](skills/autonomous-ai-agents/opencode/SKILL.md) | 1.2.0 | Delegate coding to OpenCode CLI. |
 
 ### creative *(17 skills)*
@@ -79,8 +111,8 @@ Visuals, diagrams, video, audio, and design — from ASCII art to ComfyUI pipeli
 | [`claude-design`](skills/creative/claude-design/SKILL.md) | 1.1.0 | One-off HTML artifacts — landings, decks, prototypes. |
 | [`comfyui`](skills/creative/comfyui/SKILL.md) | 5.1.0 | Image, video, audio generation — install, manage nodes/models. |
 | [`design-md`](skills/creative/design-md/SKILL.md) | 1.0.0 | Author/validate/export Google DESIGN.md token spec files. |
-| [`eikon`](skills/creative/eikon/SKILL.md) | 0.0.0 | Guide for making/editing herm sidebar avatars (eikons). |
-| [`eikon-create`](skills/creative/eikon-create/SKILL.md) | 0.0.0 | Generate source images and video for herm eikons. |
+| [`eikon`](skills/creative/eikon/SKILL.md) | 0.0.0 | Guide for making/editing agent sidebar avatars. |
+| [`eikon-create`](skills/creative/eikon-create/SKILL.md) | 0.0.0 | Generate source images and video for agent avatars. |
 | [`excalidraw`](skills/creative/excalidraw/SKILL.md) | 1.0.0 | Hand-drawn Excalidraw JSON diagrams. |
 | [`html-doc-ux`](skills/creative/html-doc-ux/SKILL.md) | 0.0.0 | UX enhancements for static HTML reference documents. |
 | [`humanizer`](skills/creative/humanizer/SKILL.md) | 2.5.1 | Strip AI-isms and add real voice. |
@@ -91,17 +123,20 @@ Visuals, diagrams, video, audio, and design — from ASCII art to ComfyUI pipeli
 | [`touchdesigner-mcp`](skills/creative/touchdesigner-mcp/SKILL.md) | 1.1.0 | Control TouchDesigner via MCP — operators, parameters, networks. |
 
 ### data-science *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`jupyter-live-kernel`](skills/data-science/jupyter-live-kernel/SKILL.md) | 1.0.0 | Iterative Python via live Jupyter kernel (hamelnb). |
 
 ### devops *(2 skills)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`fleet-health-watchdog`](skills/devops/fleet-health-watchdog/SKILL.md) | 1.2.0 | Fleet health cron — silent when healthy, alerts on circuit breaker. |
 | [`npm-workspace-maintenance`](skills/devops/npm-workspace-maintenance/SKILL.md) | 1.0.0 | Fix npm vulnerabilities, broken lockfiles, dependency issues. |
 
 ### email *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`himalaya`](skills/email/himalaya/SKILL.md) | 1.1.0 | IMAP/SMTP email from terminal via Himalaya CLI. |
@@ -123,25 +158,25 @@ Repository management, PR workflows, code review, fork operations, and auth — 
 | [`github-windows-operations`](skills/github/github-windows-operations/SKILL.md) | 0.0.0 | GitHub operations on Windows — credential helpers, path handling. |
 
 ### hermes *(16 skills)*
-Extend, configure, and evolve Hermes Agent itself — fleet profiles, cron, MCP, gateway, skill authoring, self-evolution, session continuity, and multi-agent orchestration design.
+Extend, configure, and evolve an AI agent platform — fleet profiles, cron, MCP, gateway, skill authoring, self-evolution, session continuity, and multi-agent orchestration design.
 
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`agent-persona-authoring`](skills/hermes/agent-persona-authoring/SKILL.md) | 0.0.0 | Author and refine agent personality/identity documents (SOUL.md). |
 | [`cost-performance-tuning`](skills/hermes/cost-performance-tuning/SKILL.md) | 1.6.0 | Tune model, compression, streaming, delegation settings. |
-| [`hermes-cron-operations`](skills/hermes/hermes-cron-operations/SKILL.md) | 1.5.0 | Operate and troubleshoot the Hermes cron scheduler. |
-| [`hermes-fleet-profiles`](skills/hermes/hermes-fleet-profiles/SKILL.md) | 1.11.0 | Deploy multi-agent fleet profiles from a wiki manifest. |
-| [`hermes-gateway-setup`](skills/hermes/hermes-gateway-setup/SKILL.md) | 0.0.0 | Configure Telegram, Discord, SMS gateways. |
-| [`hermes-mcp-debugging`](skills/hermes/hermes-mcp-debugging/SKILL.md) | 1.11.0 | Debug MCP servers — lifecycle, diagnostics, failures. |
-| [`hermes-output-visibility`](skills/hermes/hermes-output-visibility/SKILL.md) | 1.1.0 | Control what you see, how you see it. |
-| [`hermes-provider-setup`](skills/hermes/hermes-provider-setup/SKILL.md) | 1.3.0 | Configure LLM providers — API keys, base URLs, model selection. |
-| [`hermes-role-profile-builder`](skills/hermes/hermes-role-profile-builder/SKILL.md) | 0.0.0 | Create purpose-built profiles for specialized workflows. |
-| [`hermes-session-continuity`](skills/hermes/hermes-session-continuity/SKILL.md) | 0.0.0 | Recover context across compacted or cross-platform sessions. |
+| [`cron-operations`](skills/hermes/hermes-cron-operations/SKILL.md) | 1.5.0 | Operate and troubleshoot the agent cron scheduler. |
+| [`fleet-profiles`](skills/hermes/hermes-fleet-profiles/SKILL.md) | 1.11.0 | Deploy multi-agent fleet profiles from a wiki manifest. |
+| [`gateway-setup`](skills/hermes/hermes-gateway-setup/SKILL.md) | 0.0.0 | Configure Telegram, Discord, SMS gateways. |
+| [`mcp-debugging`](skills/hermes/hermes-mcp-debugging/SKILL.md) | 1.11.0 | Debug MCP servers — lifecycle, diagnostics, failures. |
+| [`output-visibility`](skills/hermes/hermes-output-visibility/SKILL.md) | 1.1.0 | Control what you see, how you see it. |
+| [`provider-setup`](skills/hermes/hermes-provider-setup/SKILL.md) | 1.3.0 | Configure LLM providers — API keys, base URLs, model selection. |
+| [`role-profile-builder`](skills/hermes/hermes-role-profile-builder/SKILL.md) | 0.0.0 | Create purpose-built profiles for specialized workflows. |
+| [`session-continuity`](skills/hermes/hermes-session-continuity/SKILL.md) | 0.0.0 | Recover context across compacted or cross-platform sessions. |
 | [`multi-agent-orchestration-design`](skills/hermes/multi-agent-orchestration-design/SKILL.md) | 2.8.1 | Design optimal multi-agent fleet architectures. |
 | [`self-evolution`](skills/hermes/self-evolution/SKILL.md) | 0.0.0 | Run the self-evolution pipeline — DSPy optimization. |
 | [`skill-maintenance`](skills/hermes/skill-maintenance/SKILL.md) | 2.0.0 | Keep skills lean — bloat audits, consolidation workflows. |
 | [`cascade`](skills/hermes/cascade/SKILL.md) | — | *Documentation placeholder.* |
-| [`isolated-hermes-instance`](skills/hermes/isolated-hermes-instance/SKILL.md) | — | *Documentation placeholder.* |
+| [`isolated-instance`](skills/hermes/isolated-hermes-instance/SKILL.md) | — | *Documentation placeholder.* |
 | [`session-wiki-pipeline`](skills/hermes/session-wiki-pipeline/SKILL.md) | — | *Documentation placeholder.* |
 
 ### knowledge-base-organization *(3 skills)*
@@ -154,11 +189,13 @@ Extract structured knowledge, migrate content, and create entity pages for your 
 | [`wishlist-entity-creation`](skills/knowledge-base-organization/wishlist-entity-creation/SKILL.md) | 0.0.0 | Create standardized entity pages with provenance tracking. |
 
 ### mcp *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`native-mcp`](skills/mcp/native-mcp/SKILL.md) | 1.3.0 | MCP client — connect servers, register tools (stdio/HTTP). |
 
 ### media *(3 skills)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`heartmula`](skills/media/heartmula/SKILL.md) | 1.0.0 | Suno-like song generation from lyrics + tags. |
@@ -166,23 +203,26 @@ Extract structured knowledge, migrate content, and create entity pages for your 
 | [`youtube-content`](skills/media/youtube-content/SKILL.md) | 0.0.0 | YouTube transcripts to summaries, threads, blogs. |
 
 ### messaging *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`signal-cli`](skills/messaging/signal-cli/SKILL.md) | 1.0.0 | Install, configure, and use Signal CLI on Windows. |
 
 ### mlops *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`huggingface-hub`](skills/mlops/huggingface-hub/SKILL.md) | 1.0.0 | Search, download, upload models and datasets via hf CLI. |
 
 ### note-taking *(2 skills)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`brave-bookmarks-to-wiki`](skills/note-taking/brave-bookmarks-to-wiki/SKILL.md) | 2.2.0 | Parse Brave bookmarks into wiki pages. |
 | [`obsidian`](skills/note-taking/obsidian/SKILL.md) | 0.0.0 | Read, search, create, and edit Obsidian vault notes. |
 
 ### productivity *(16 skills)*
-ADHD-friendly tools, task management, documents, maps, notetaking, and workspace organization. Includes brain-dump, quick-win, and redirect for executive function support.
+ADHD-friendly tools, task management, documents, maps, notetaking, and workspace organization.
 
 | Skill | Version | Description |
 |-------|---------|-------------|
@@ -196,14 +236,15 @@ ADHD-friendly tools, task management, documents, maps, notetaking, and workspace
 | [`nano-pdf`](skills/productivity/nano-pdf/SKILL.md) | 1.0.0 | Edit PDF text/typos/titles via natural language. |
 | [`notion`](skills/productivity/notion/SKILL.md) | 2.0.0 | Notion API + ntn CLI — pages, databases, markdown. |
 | [`ocr-and-documents`](skills/productivity/ocr-and-documents/SKILL.md) | 2.3.0 | Extract text from PDFs and scans. |
-| [`petdex`](skills/productivity/petdex/SKILL.md) | 1.0.0 | Install animated petdex mascots for Hermes. |
+| [`petdex`](skills/productivity/petdex/SKILL.md) | 1.0.0 | Install animated petdex mascots for your agent. |
 | [`powerpoint`](skills/productivity/powerpoint/SKILL.md) | 0.0.0 | Create, read, edit .pptx decks and slides. |
 | [`quick-win`](skills/productivity/quick-win/SKILL.md) | 3 | ADHD dopamine hack — find a single ≤5 min task. |
 | [`recipe-card-generation`](skills/productivity/recipe-card-generation/SKILL.md) | 0.0.0 | Generate formatted recipe cards as PDFs. |
 | [`redirect`](skills/productivity/redirect/SKILL.md) | 3 | ADHD recovery — minimize distractions and re-engage. |
-| [`teams-meeting-pipeline`](skills/productivity/teams-meeting-pipeline/SKILL.md) | 1.1.0 | Summarize Teams meetings via Hermes CLI. |
+| [`teams-meeting-pipeline`](skills/productivity/teams-meeting-pipeline/SKILL.md) | 1.1.0 | Summarize Teams meetings via CLI. |
 
 ### red-teaming *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`godmode`](skills/red-teaming/godmode/SKILL.md) | 1.0.0 | LLM jailbreaking research — Parseltongue, GODMODE, ULTRAPLINIAN. |
@@ -223,11 +264,13 @@ Academic research, market data, community mining, and paper writing — arxiv, P
 | [`ecosystem-reconnaissance`](skills/research/ecosystem-reconnaissance/SKILL.md) | — | *Documentation placeholder.* |
 
 ### smart-home *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`openhue`](skills/smart-home/openhue/SKILL.md) | 1.0.0 | Control Philips Hue lights, scenes, rooms via CLI. |
 
 ### social-media *(1 skill)*
+
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`xurl`](skills/social-media/xurl/SKILL.md) | 1.1.1 | X/Twitter — post, search, DM, media, v2 API. |
@@ -238,7 +281,7 @@ Full-stack development workflows — terminal stack, TDD, debugging, code review
 | Skill | Version | Description |
 |-------|---------|-------------|
 | [`ai-terminal-stack`](skills/software-development/ai-terminal-stack/SKILL.md) | 0.0.0 | Plan and configure an AI terminal stack: zellij, neovim, WezTerm. |
-| [`hermes-agent-skill-authoring`](skills/software-development/hermes-agent-skill-authoring/SKILL.md) | 2.0.0 | Author SKILL.md files — frontmatter, structure, conventions. |
+| [`skill-authoring`](skills/software-development/hermes-agent-skill-authoring/SKILL.md) | 2.0.0 | Author SKILL.md files — frontmatter, structure, conventions. |
 | [`html-application-building`](skills/software-development/html-application-building/SKILL.md) | 0.0.0 | Build polished, self-contained HTML single-page apps. |
 | [`local-llm-setup`](skills/software-development/local-llm-setup/SKILL.md) | 1.0.0 | Local LLM inference on Windows — Ollama, llama.cpp, vLLM. |
 | [`node-inspect-debugger`](skills/software-development/node-inspect-debugger/SKILL.md) | 1.0.0 | Debug Node.js via --inspect + CDP CLI. |
@@ -257,33 +300,13 @@ Full-stack development workflows — terminal stack, TDD, debugging, code review
 
 ---
 
-## Managing Installed Skills
-
-```bash
-# List installed skills
-hermes skills list
-
-# View a skill's content (loaded after install)
-hermes skills view <skill-name>
-
-# Remove a skill
-hermes skills remove <skill-name>
-
-# Update all skills from registered taps
-hermes skills update
-```
-
-See the [Hermes Agent documentation](https://hermes-agent.nousresearch.com/docs) for complete CLI reference.
-
----
-
 ## Contributing
 
 This repository is auto-generated from a private monorepo via PII-gated export. Skills are curated, sanitized, and published periodically.
 
 **To suggest improvements or report issues:** open a GitHub issue with the skill name in the title.
 
-**To create your own skills:** use the `hermes-agent-skill-authoring` skill for structure and conventions, then publish via `hermes skills tap add <your-repo>`.
+**To create your own skills:** use the `skill-authoring` skill for structure and conventions, then publish via your agent's skill tap system.
 
 ---
 
